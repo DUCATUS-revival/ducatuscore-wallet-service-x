@@ -63,6 +63,7 @@
     "tingodb": "^0.3.4"
   },
   "scripts": {
+    "postinstall": "cp networks.js node_modules/bitcore-lib/lib/",
     "start": "./start.sh",
     "stop": "./stop.sh",
     "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --reporter spec test",
