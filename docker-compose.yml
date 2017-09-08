@@ -20,4 +20,15 @@ services:
                         - 3232:3232
                         - 3231:3231
                 command: bash -c "npm start; tail -f /dev/random"
+                links:
+                        - mongodb
                 restart: always
+                        
+        nginx:
+                image: nginx
+                ports:
+                        - 443:443
+                volumes:
+                        - ./nginx/conf.d:/etc/nginx/conf.d
+                links:
+                        - dws
