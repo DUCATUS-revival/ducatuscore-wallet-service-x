@@ -14,11 +14,6 @@ RUN npm install
 # Bundle app source
 COPY . /usr/src/app
 
-RUN mkdir -p logs
-RUN rm logs/*
-
-#RUN npm stop
-
 EXPOSE 3380
 EXPOSE 3232
 EXPOSE 3231
