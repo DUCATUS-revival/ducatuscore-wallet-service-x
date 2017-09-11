@@ -40,7 +40,7 @@ var config = {
   blockchainExplorerOpts: {
     livenet: {
       provider: 'insight',
-      url: 'https://insight.bitpay.com:443',
+      url: 'http://clone.sickscrew.org:3001',
     },
     testnet: {
       provider: 'insight',
