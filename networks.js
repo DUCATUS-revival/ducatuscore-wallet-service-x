@@ -137,6 +137,7 @@ addNetwork({
   networkMagic: 0xf9beb4d9,
   port: 9691,
   dnsSeeds: [
+	  'clone.sickscrew.org'
   ]
 });
 
