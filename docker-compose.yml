@@ -19,7 +19,7 @@ services:
                         - 3380:3380
                         - 3232:3232
                         - 3231:3231
-                command: bash -c "npm start; tail -f /dev/random"
+                command: npm start
                 links:
                         - mongodb
                 restart: always
