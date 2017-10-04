@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cp networks.js /usr/src/app/node_modules/bitcore-lib/lib/networks.js
+cp networks.js /usr/src/app/node_modules/ducatuscore-lib/lib/networks.js
 
 mkdir -p logs
 mkdir -p pids

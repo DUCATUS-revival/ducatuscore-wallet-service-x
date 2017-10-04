@@ -1,27 +1,27 @@
 {
-  "name": "bitcore-wallet-service",
+  "name": "ducatuscore-wallet-service",
   "description": "A service for Mutisig HD Bitcoin Wallets",
   "author": "BitPay Inc",
   "version": "1.17.0",
   "licence": "MIT",
   "keywords": [
-    "bitcoin",
+    "ducatuscoin",
     "copay",
     "multisig",
     "wallet",
-    "bitcore",
+    "ducatuscore",
     "BWS"
   ],
   "repository": {
-    "url": "git@github.com:bitpay/bitcore-wallet-service.git",
+    "url": "git@github.com:Ducatus/ducatuscore-wallet-service.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/bitpay/bitcore-wallet-service/issues"
+    "url": "https://github.com/Ducatus/ducatuscore-wallet-service/issues"
   },
   "dependencies": {
     "async": "^0.9.2",
-    "bitcore-lib": "^0.14.0",
+    "ducatuscore-lib": "git+ssh://git@github.com/Ducatus/ducatuscore-lib.git",
     "body-parser": "^1.17.2",
     "compression": "^1.6.2",
     "coveralls": "^2.11.2",
@@ -63,14 +63,13 @@
     "tingodb": "^0.3.4"
   },
   "scripts": {
-    "postinstall": "cp networks.js node_modules/bitcore-lib/lib/",
     "start": "./start.sh",
     "stop": "./stop.sh",
     "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --reporter spec test",
     "test": "./node_modules/.bin/mocha",
     "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
-  "bitcoreNode": "./bitcorenode",
+  "ducatuscoreNode": "./ducatuscorenode",
   "contributors": [
     {
       "name": "Braydon Fuller",
