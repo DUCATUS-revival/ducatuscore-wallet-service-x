@@ -40,7 +40,7 @@ var config = {
   blockchainExplorerOpts: {
     livenet: {
       provider: 'insight',
-      url: 'http://198.58.114.189:3001',
+      url: 'http://insight.ducatus.io:3001',
     },
     testnet: {
       provider: 'insight',
