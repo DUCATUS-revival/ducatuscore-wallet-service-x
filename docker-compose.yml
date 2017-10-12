@@ -9,7 +9,7 @@ services:
                         - MONGO_DATA_DIR=/data/db
                         - MONGO_LOG_DIR=/dev/null
                 volumes:
-                        - ./data/db:/data/db
+                        - mongodb-volume:/data/db
                 command: mongod --smallfiles --logpath=/dev/null # --quiet
                 restart: always
 
@@ -34,4 +34,5 @@ services:
                         - ./nginx/keys:/etc/nginx/keys
                 links:
                         - dws
-
+volumes:
+	mongodb-volume:
