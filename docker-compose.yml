@@ -13,7 +13,7 @@ services:
 
         dws:
                 image: ducatuscore-wallet-service
-                command: npm start
+                command: bash -c "npm stop; npm start"
                 ports:
                         - 3380:3380
                         - 3232:3232
