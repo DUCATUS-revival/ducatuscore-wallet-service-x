@@ -3,8 +3,6 @@ version: '2'
 services:
         mongodb:
                 image: mongo
-                ports:
-                        - 27017:27017
                 environment:
                         - MONGO_DATA_DIR=/data/db
                         - MONGO_LOG_DIR=/dev/null
@@ -15,18 +13,18 @@ services:
 
         dws:
                 image: ducatuscore-wallet-service
+                command: npm start
                 ports:
                         - 3380:3380
                         - 3232:3232
                         - 3231:3231
-                command: npm start
                 links:
                         - mongodb
                 restart: always
                         
         nginx:
                 image: nginx
-		restart: always
+                restart: always
                 ports:
                         - 443:443
                 volumes:
@@ -35,4 +33,4 @@ services:
                 links:
                         - dws
 volumes:
-	mongodb-volume:
+        mongodb-volume:

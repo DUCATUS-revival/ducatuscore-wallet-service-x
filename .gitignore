@@ -37,3 +37,6 @@ multilevel/db/*
 *~
 data/
 nginx/keys
+
+ssh_key/*
+!*.placeholder
